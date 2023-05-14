@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Caméra de surveillance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      #video-stream {
+        max-width: 100%;
+        height: auto;
+        margin: 20px auto;
+        display: block;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      @media only screen and (max-width: 600px) {
+        .container {
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Caméra de surveillance</h1>
+      <img id="video-stream" src="{{ url_for('video_feed') }}" />
+    </div>
+  </body>
+</html>
